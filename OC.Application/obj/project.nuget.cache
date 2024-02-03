@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "fHOcZ8+McSU7xNjBgTeTLCmp2r9MwEwZl+fppufSy89s9XuV1i3HFRZDAvarnTCPLHjHtR7wvv689otmGqlVIg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jande\\OneDrive\\Área de Trabalho\\C# Projects\\Messaging\\OC.Messaging\\OC.Application\\OC.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jande\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

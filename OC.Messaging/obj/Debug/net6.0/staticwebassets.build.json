@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "5J9xdUoK9bIO62luA7FiECnpt5NKAhNqLrb2doXm9fk=",
+  "Source": "OC.Messaging",
+  "BasePath": "_content/OC.Messaging",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

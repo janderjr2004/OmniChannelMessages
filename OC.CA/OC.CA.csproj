@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OC.Infra\OC.Infra.csproj" />
+    <ProjectReference Include="..\OC.Libraries\OC.Libraries.csproj" />
+    <ProjectReference Include="..\OC.Messaging\OC.Messaging.csproj" />
+    <ProjectReference Include="..\OC.Validations\OC.Validations.csproj" />
+  </ItemGroup>
+
+</Project>
