@@ -14,4 +14,8 @@
     <ProjectReference Include="..\OC.Validations\OC.Validations.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Factories\MessagesFactory\" />
+  </ItemGroup>
+
 </Project>

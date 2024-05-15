@@ -58,9 +58,21 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.24.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.24.0, )"
             }
           },
           "imports": [
@@ -111,7 +123,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\jande\\OneDrive\\Área de Trabalho\\C# Projects\\Messaging\\OC.Messaging\\OC.Entities\\OC.Entities.csproj": {
+                "projectPath": "C:\\Users\\jande\\OneDrive\\Área de Trabalho\\C# Projects\\Messaging\\OC.Messaging\\OC.Entities\\OC.Entities.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -416,6 +432,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.13, )"

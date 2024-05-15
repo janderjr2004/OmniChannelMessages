@@ -96,3 +96,6 @@ C:\Users\jande\OneDrive\Área de Trabalho\C# Projects\Messaging\OC.Messaging\OC.
 C:\Users\jande\OneDrive\Área de Trabalho\C# Projects\Messaging\OC.Messaging\OC.Messaging\bin\Debug\net6.0\OC.Contracts.dll
 C:\Users\jande\OneDrive\Área de Trabalho\C# Projects\Messaging\OC.Messaging\OC.Messaging\bin\Debug\net6.0\OC.Application.pdb
 C:\Users\jande\OneDrive\Área de Trabalho\C# Projects\Messaging\OC.Messaging\OC.Messaging\bin\Debug\net6.0\OC.Contracts.pdb
+C:\Users\jande\OneDrive\Área de Trabalho\C# Projects\Messaging\OC.Messaging\OC.Messaging\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\Users\jande\OneDrive\Área de Trabalho\C# Projects\Messaging\OC.Messaging\OC.Messaging\obj\Debug\net6.0\OC.Messaging.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\jande\OneDrive\Área de Trabalho\C# Projects\Messaging\OC.Messaging\OC.Messaging\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

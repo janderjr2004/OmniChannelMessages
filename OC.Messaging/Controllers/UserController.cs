@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using OC.Application.Interfaces.Commands;
 using OC.Contracts.Requests;
 
@@ -6,6 +7,7 @@ namespace OC.Messaging.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class UserController : ControllerBase
     {
         private readonly ICreateUserCommand _createUserCommand;

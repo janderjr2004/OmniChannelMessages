@@ -59,6 +59,25 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.10.0"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "compile": {
@@ -304,10 +323,30 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Abstractions/7.0.0": {
+      "Microsoft.Extensions.Configuration/8.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "7.0.0"
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "8.0.0"
         },
         "compile": {
           "lib/net6.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
@@ -436,7 +475,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.Extensions.Primitives/7.0.0": {
+      "Microsoft.Extensions.Primitives/8.0.0": {
         "type": "package",
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
@@ -1152,11 +1191,14 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Microsoft.Extensions.Configuration": "8.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
+          "Microsoft.IdentityModel.Tokens": "6.24.0",
           "OC.Contracts": "1.0.0",
           "OC.Entities": "1.0.0",
           "OC.Libraries": "1.0.0",
-          "OC.Validations": "1.0.0"
+          "OC.Validations": "1.0.0",
+          "System.IdentityModel.Tokens.Jwt": "6.24.0"
         },
         "compile": {
           "bin/placeholder/OC.Application.dll": {}
@@ -1168,6 +1210,9 @@
       "OC.Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "OC.Entities": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/OC.Contracts.dll": {}
         },
@@ -1283,6 +1328,21 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.0": {
+      "sha512": "eIhpX25uUn33Ornnh718V2G/nESvk3TNX2FjTarv634GLfE50Fhz2geJ/QYpSmFaUIQ1hkZPfd9i0LcpZ9bfLQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
+        "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
+        "microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -1851,15 +1911,46 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Configuration.Abstractions/7.0.0": {
-      "sha512": "f34u2eaqIjNO9YLHBz8rozVZ+TcFiFs0F3r7nUJd7FRkVSxk8u4OpoK226mi49MwexHOR2ibP9MFvRUaLilcQQ==",
+    "Microsoft.Extensions.Configuration/8.0.0": {
+      "sha512": "0J/9YNXTMWSZP2p2+nvl8p71zpSwokZXZuJW+VjdErkegAnFdO1XlqtA62SJtgVYHdKu3uPxJHcMR/r35HwFBA==",
       "type": "package",
-      "path": "microsoft.extensions.configuration.abstractions/7.0.0",
+      "path": "microsoft.extensions.configuration/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.Configuration.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Configuration.targets",
+        "lib/net462/Microsoft.Extensions.Configuration.dll",
+        "lib/net462/Microsoft.Extensions.Configuration.xml",
+        "lib/net6.0/Microsoft.Extensions.Configuration.dll",
+        "lib/net6.0/Microsoft.Extensions.Configuration.xml",
+        "lib/net7.0/Microsoft.Extensions.Configuration.dll",
+        "lib/net7.0/Microsoft.Extensions.Configuration.xml",
+        "lib/net8.0/Microsoft.Extensions.Configuration.dll",
+        "lib/net8.0/Microsoft.Extensions.Configuration.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.xml",
+        "microsoft.extensions.configuration.8.0.0.nupkg.sha512",
+        "microsoft.extensions.configuration.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/8.0.0": {
+      "sha512": "3lE/iLSutpgX1CC0NOW70FJoGARRHbyKmG7dc0klnUZ9Dd9hS6N/POPWhKhMLCEuNN5nXEY5agmlFtH562vqhQ==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.abstractions/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/net461/Microsoft.Extensions.Configuration.Abstractions.targets",
         "buildTransitive/net462/_._",
@@ -1871,9 +1962,11 @@
         "lib/net6.0/Microsoft.Extensions.Configuration.Abstractions.xml",
         "lib/net7.0/Microsoft.Extensions.Configuration.Abstractions.dll",
         "lib/net7.0/Microsoft.Extensions.Configuration.Abstractions.xml",
+        "lib/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "lib/net8.0/Microsoft.Extensions.Configuration.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.xml",
-        "microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+        "microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
         "microsoft.extensions.configuration.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -2092,15 +2185,16 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Primitives/7.0.0": {
-      "sha512": "um1KU5kxcRp3CNuI8o/GrZtD4AIOXDk+RLsytjZ9QPok3ttLUelLKpilVPuaFT3TFjOhSibUAso0odbOaCDj3Q==",
+    "Microsoft.Extensions.Primitives/8.0.0": {
+      "sha512": "bXJEZrW9ny8vjMF1JV253WeLhpEVzFo1lyaZu1vQ4ZxWUlVvknZ/+ftFgVheLubb4eZPSwwxBeqS1JkCOjxd8g==",
       "type": "package",
-      "path": "microsoft.extensions.primitives/7.0.0",
+      "path": "microsoft.extensions.primitives/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
+        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/net461/Microsoft.Extensions.Primitives.targets",
         "buildTransitive/net462/_._",
@@ -2112,9 +2206,11 @@
         "lib/net6.0/Microsoft.Extensions.Primitives.xml",
         "lib/net7.0/Microsoft.Extensions.Primitives.dll",
         "lib/net7.0/Microsoft.Extensions.Primitives.xml",
+        "lib/net8.0/Microsoft.Extensions.Primitives.dll",
+        "lib/net8.0/Microsoft.Extensions.Primitives.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
-        "microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+        "microsoft.extensions.primitives.8.0.0.nupkg.sha512",
         "microsoft.extensions.primitives.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -3419,6 +3515,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.13",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.13",
@@ -3484,6 +3581,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[7.0.13, )"

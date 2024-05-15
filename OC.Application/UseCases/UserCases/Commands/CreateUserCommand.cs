@@ -37,7 +37,7 @@ namespace OC.Application.UseCases.UserCases.Commands
 
             if (result.Fail) return Validation<User>.Failed(result.Error);
 
-            
+            return Validation<User>.Succeeded(result.GetValue());
         }
     }
 }

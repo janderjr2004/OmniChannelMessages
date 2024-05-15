@@ -2,6 +2,7 @@
 using OC.Entities;
 using OC.Infra.Interfaces.DefaultRepositories;
 using OC.Validations;
+using OC.Validations.Errors;
 
 namespace OC.Infra.Repositories
 {
@@ -40,6 +41,17 @@ namespace OC.Infra.Repositories
         public async Task<Validation<User>> Get(int id, bool tracking = false)
         {
             return await _getRepository.Execute(_context, id, tracking);
+        }
+
+        public async Task<Validation<User>> GetLoginCredentials(string login, string password)
+        {
+            var queryUser = (from u in _context.Users
+                         where u.Login == login && u.Password == password
+                         select u).FirstOrDefault();
+
+            if (queryUser is null) return Validation<User>.Failed(Error.NotFound<User>());
+
+            return Validation<User>.Succeeded(queryUser);
         }
 
         public async Task<Validation<User>> Update(User entity)

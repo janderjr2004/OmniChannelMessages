@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "OC.Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/OC.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OC.Entities.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "OC.Entities/1.0.0": {
+      "type": "project",
+      "path": "../OC.Entities/OC.Entities.csproj",
+      "msbuildProject": "../OC.Entities/OC.Entities.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "OC.Entities >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\jande\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\jande\\OneDrive\\Área de Trabalho\\C# Projects\\Messaging\\OC.Messaging\\OC.Entities\\OC.Entities.csproj": {
+              "projectPath": "C:\\Users\\jande\\OneDrive\\Área de Trabalho\\C# Projects\\Messaging\\OC.Messaging\\OC.Entities\\OC.Entities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

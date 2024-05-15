@@ -2,7 +2,7 @@
 {
     public record UserRequest
     (
-        int Id,
+        int? Id,
         string Login,
         string Password,
         int[] Channels

@@ -4,9 +4,9 @@ namespace OC.Validations.Errors
 {
     public static class Error
     {
-        public static ErrorMessage NotFound(string code = "Default.NotFound", string message = "A not found error has ocurred!")
+        public static ErrorMessage NotFound<T>(string code = "Default.NotFound", string message = "A not found error has ocurred in Default entity!")
         {
-            return new ErrorMessage(code, message, ErrorType.NotFound);
+            return new ErrorMessage(code.Replace("Default", nameof(T)), message.Replace("Default", nameof(T)), ErrorType.NotFound);
         }
         public static ErrorMessage Validation(string code = "Default.Validation", string message = "A validation error has ocurred!")
         {

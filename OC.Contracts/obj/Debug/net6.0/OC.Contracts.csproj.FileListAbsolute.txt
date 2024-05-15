@@ -9,3 +9,7 @@ C:\Users\jande\OneDrive\Área de Trabalho\C# Projects\Messaging\OC.Messaging\OC.
 C:\Users\jande\OneDrive\Área de Trabalho\C# Projects\Messaging\OC.Messaging\OC.Contracts\obj\Debug\net6.0\refint\OC.Contracts.dll
 C:\Users\jande\OneDrive\Área de Trabalho\C# Projects\Messaging\OC.Messaging\OC.Contracts\obj\Debug\net6.0\OC.Contracts.pdb
 C:\Users\jande\OneDrive\Área de Trabalho\C# Projects\Messaging\OC.Messaging\OC.Contracts\obj\Debug\net6.0\ref\OC.Contracts.dll
+C:\Users\jande\OneDrive\Área de Trabalho\C# Projects\Messaging\OC.Messaging\OC.Contracts\bin\Debug\net6.0\OC.Entities.dll
+C:\Users\jande\OneDrive\Área de Trabalho\C# Projects\Messaging\OC.Messaging\OC.Contracts\bin\Debug\net6.0\OC.Entities.pdb
+C:\Users\jande\OneDrive\Área de Trabalho\C# Projects\Messaging\OC.Messaging\OC.Contracts\obj\Debug\net6.0\OC.Contracts.csproj.AssemblyReference.cache
+C:\Users\jande\OneDrive\Área de Trabalho\C# Projects\Messaging\OC.Messaging\OC.Contracts\obj\Debug\net6.0\OC.Contracts.csproj.CopyComplete

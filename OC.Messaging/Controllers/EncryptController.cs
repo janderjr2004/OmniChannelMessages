@@ -24,14 +24,14 @@ namespace OC.Messaging.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            //var encryptData = new EncryptClass("Server=localhost;Database=OC_MESSAGING;User Id=sa;Password=senh@123;",9,CryptographyTypes.JC);
+            //var encryptData = new EncryptClass("service feel love library soon bench limb they capable grab mosquito copy", CryptographyTypes.JC, 9);
 
             //var teste = _encryptData.Execute(encryptData);
 
             //var value = FileFactory.Get(fileClass);
 
-            //encryptData = new EncryptClass(value.GetValue(), 9, CryptographyTypes.JC);
-            //var decryptData = _decryptData.Execute(encryptData);
+            var encryptData = new EncryptClass("8Y/XfvFxMiE8R?#QR])R$M69%b8lyAc&Ihçmc:´mESRXA4\"UCNYTUGMUUPGPSNUGPYFC:C´G\"SSIGFUITKGPYOFGWKU´GT:A:FPUGBC:FGOS\"HVYWSGTSA´UçRJA)ÇWx'5gA&WbM(h[9z=R:*gr6DSf?6rQYynkSçnF7", CryptographyTypes.JC, 9);
+            var decryptData = _decryptData.Execute(encryptData);
 
             return Ok("Operação realizada com sucesso");
         }
