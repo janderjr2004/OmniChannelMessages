@@ -1,8 +1,12 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using OC.Application.Interfaces.Factories;
 using OC.Application.Interfaces.Repositories;
+using OC.Application.Interfaces.Services;
 using OC.Infra.Interfaces.DefaultRepositories;
 using OC.Infra.Repositories;
 using OC.Infra.Repositories.DefaultRepositores;
+using OC.Infra.Services;
+using OC.Libraries.Factories.MessagesFactory;
 
 namespace OC.Infra
 {
@@ -18,18 +22,29 @@ namespace OC.Infra
             services.AddScoped(typeof(IDefaultFilterRepository<>), typeof(DefaultFilterRepository<>));
             services.AddScoped(typeof(IDefaultUpdateRepository<>), typeof(DefaultUpdateRepository<>));
 
-            services.AddInfra();
+            services.AddInfraRepositories();
+            services.AddInfraServices();
 
             return services;
         }
 
-        public static IServiceCollection AddInfra(
+        public static IServiceCollection AddInfraRepositories(
             this IServiceCollection services
             /*IConfiguration configuration*/
         )
         {
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserTypeChannelRepository, UserTypeChannelRepository>();
+
+            return services;
+        }        
+        
+        public static IServiceCollection AddInfraServices(
+            this IServiceCollection services
+            /*IConfiguration configuration*/
+        )
+        {
+            services.AddScoped<IProviderFactory, ProviderFactory>();
 
             return services;
         }

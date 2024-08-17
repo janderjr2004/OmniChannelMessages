@@ -1,6 +1,10 @@
-﻿using OC.Application.Interfaces.Repositories;
+﻿using Azure.Core;
+using OC.Application.Interfaces.Repositories;
 using OC.Entities;
 using OC.Infra.Interfaces.DefaultRepositories;
+using OC.Libraries.Classes;
+using OC.Libraries.Enums;
+using OC.Libraries.Interfaces;
 using OC.Validations;
 using OC.Validations.Errors;
 

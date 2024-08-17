@@ -11,15 +11,19 @@ namespace OC.Messaging.Controllers
     public class UserController : ControllerBase
     {
         private readonly ICreateUserCommand _createUserCommand;
+        private readonly ILinkUserTypeChannelCommand _linkUserTypeChannelCommand;
 
         public UserController(
-            ICreateUserCommand createUserCommand
+            ICreateUserCommand createUserCommand, 
+            ILinkUserTypeChannelCommand linkUserTypeChannelCommand
         )
         {
             _createUserCommand = createUserCommand;
+            _linkUserTypeChannelCommand = linkUserTypeChannelCommand;
         }
 
         [HttpPost("create")]
+        [AllowAnonymous]
         public async Task<IActionResult> Create(UserRequest request)
         {
             var result = await _createUserCommand.Execute(request);
@@ -28,9 +32,9 @@ namespace OC.Messaging.Controllers
         }        
         
         [HttpPost("link")]
-        public async Task<IActionResult> LinkUsersTypeChannel(UserRequest request)
+        public async Task<IActionResult> LinkUsersTypeChannel(LinkUserRequest request)
         {
-            var result = await _createUserCommand.Execute(request);
+            var result = await _linkUserTypeChannelCommand.Execute(request.UserId, request.TypeChannelIds);
 
             return result.Success ? Ok(result.GetValue()) : BadRequest(result.Error);
         }

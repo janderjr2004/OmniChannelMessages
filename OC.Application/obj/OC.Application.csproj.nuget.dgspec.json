@@ -248,6 +248,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\jande\\OneDrive\\Área de Trabalho\\C# Projects\\Messaging\\OC.Messaging\\OC.Entities\\OC.Entities.csproj": {
+                "projectPath": "C:\\Users\\jande\\OneDrive\\Área de Trabalho\\C# Projects\\Messaging\\OC.Messaging\\OC.Entities\\OC.Entities.csproj"
+              },
               "C:\\Users\\jande\\OneDrive\\Área de Trabalho\\C# Projects\\Messaging\\OC.Messaging\\OC.Validations\\OC.Validations.csproj": {
                 "projectPath": "C:\\Users\\jande\\OneDrive\\Área de Trabalho\\C# Projects\\Messaging\\OC.Messaging\\OC.Validations\\OC.Validations.csproj"
               }

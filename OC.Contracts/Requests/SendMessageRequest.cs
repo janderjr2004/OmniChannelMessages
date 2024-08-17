@@ -4,8 +4,10 @@ namespace OC.Contracts.Requests
 {
     public record SendMessageRequest
     (
-        string Message,
+        MessageObjectRequest MessageObject,
         ProviderType ProviderType,
-        string Recipient
+        string Recipient,
+        string Sender,
+        SmtpConfigurationRequest SmtpConfiguration
     );
 }

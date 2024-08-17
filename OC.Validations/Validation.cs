@@ -24,7 +24,7 @@ namespace OC.Validations
             return new Validation<T>(false, true, error);
         }
 
-        public static Validation<T> Succeeded(T? value)
+        public static Validation<T> Succeeded(T? value = default)
         {
             return new Validation<T>(true, false, null, value);
         }

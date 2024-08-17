@@ -284,6 +284,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
+          "OC.Entities": "1.0.0",
           "OC.Validations": "1.0.0"
         },
         "compile": {

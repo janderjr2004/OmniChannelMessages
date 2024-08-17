@@ -18,6 +18,16 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "OC.Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/OC.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OC.Entities.dll": {}
+        }
+      },
       "OC.Validations/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -60,6 +70,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "OC.Entities/1.0.0": {
+      "type": "project",
+      "path": "../OC.Entities/OC.Entities.csproj",
+      "msbuildProject": "../OC.Entities/OC.Entities.csproj"
+    },
     "OC.Validations/1.0.0": {
       "type": "project",
       "path": "../OC.Validations/OC.Validations.csproj",
@@ -69,6 +84,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 7.0.0",
+      "OC.Entities >= 1.0.0",
       "OC.Validations >= 1.0.0"
     ]
   },
@@ -105,6 +121,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\jande\\OneDrive\\Área de Trabalho\\C# Projects\\Messaging\\OC.Messaging\\OC.Entities\\OC.Entities.csproj": {
+              "projectPath": "C:\\Users\\jande\\OneDrive\\Área de Trabalho\\C# Projects\\Messaging\\OC.Messaging\\OC.Entities\\OC.Entities.csproj"
+            },
             "C:\\Users\\jande\\OneDrive\\Área de Trabalho\\C# Projects\\Messaging\\OC.Messaging\\OC.Validations\\OC.Validations.csproj": {
               "projectPath": "C:\\Users\\jande\\OneDrive\\Área de Trabalho\\C# Projects\\Messaging\\OC.Messaging\\OC.Validations\\OC.Validations.csproj"
             }

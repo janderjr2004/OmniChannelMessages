@@ -12,12 +12,15 @@ namespace OC.Application.UseCases.UserCases.Commands
     public class CreateUserCommand : ICreateUserCommand
     {
         private readonly IUserRepository _userRepository;
+        private readonly ILinkUserTypeChannelCommand _linkUserTypeChannelCommand;
         private readonly IEncryptData _encryptData;
 
-        public CreateUserCommand(IUserRepository userRepository, IEncryptData encryptData)
+        public CreateUserCommand(IUserRepository userRepository, IEncryptData encryptData, 
+            ILinkUserTypeChannelCommand linkUserTypeChannelCommand)
         {
             _userRepository = userRepository;
             _encryptData = encryptData;
+            _linkUserTypeChannelCommand = linkUserTypeChannelCommand;
         }
 
         public async Task<Validation<User>> Execute(UserRequest request)
@@ -35,8 +38,14 @@ namespace OC.Application.UseCases.UserCases.Commands
 
             var result = await _userRepository.Create(user);
 
-            if (result.Fail) return Validation<User>.Failed(result.Error);
+            if (result.Fail) 
+                return Validation<User>.Failed(result.Error);
 
+            var resultLinkUserTypeChannel = await _linkUserTypeChannelCommand.Execute(user.Id, request.Channels);
+
+            if (resultLinkUserTypeChannel.Fail)
+                return Validation<User>.Failed(resultLinkUserTypeChannel.Error);
+            
             return Validation<User>.Succeeded(result.GetValue());
         }
     }
